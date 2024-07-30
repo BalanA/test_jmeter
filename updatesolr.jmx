@@ -31,14 +31,21 @@
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">$[{\n      &quot;job_title&quot;:[&quot;python dev&quot;],\n      &quot;job_link&quot;:[&quot;https://posturi.gov.ro/anunt/asistent-medical-principal-38/&quot;],\n      &quot;company&quot;:[&quot;AdeCo&quot;],\n      &quot;country&quot;:[&quot;România&quot;],\n      &quot;city&quot;:[&quot;Alexandria&quot;],\n      &quot;remote&quot;:[&quot;on-site&quot;],\n      &quot;id&quot;:&quot;abcde&quot;\n    }]</stringProp>
+                <stringProp name="Argument.value">[{&#xd;
+      &quot;job_title&quot;:[&quot;python dev&quot;],&#xd;
+      &quot;job_link&quot;:[&quot;https://posturi.gov.ro/anunt/asistent-medical-principal-38/&quot;],&#xd;
+      &quot;company&quot;:[&quot;AdeCo&quot;],&#xd;
+      &quot;country&quot;:[&quot;România&quot;],&#xd;
+      &quot;city&quot;:[&quot;Alexandria&quot;],&#xd;
+      &quot;remote&quot;:[&quot;on-site&quot;],&#xd;
+      &quot;id&quot;:&quot;${__UUID}&quot;&#xd;
+    }]</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
               </elementProp>
             </collectionProp>
           </elementProp>
